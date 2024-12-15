@@ -1,4 +1,7 @@
 # domoticzArping2MQTTAD
+
+##### Don't try to use this yet, work in progress #####
+
 A docker to create MQTT topics for devices connected on the local network using Arping instead of ping for reliability.
 
 Installation
