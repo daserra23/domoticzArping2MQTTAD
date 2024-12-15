@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  presence-checker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: domoticz-arping-presence
+    restart: unless-stopped
+    environment:
+      MQTT_BROKER: "192.168.2.31"
+      DISCOVERY_TOPIC_PREFIX: "domoticz/presence"
+      DEVICES: "device1:192.168.2.12,device2:192.168.2.13,device3:192.168.2.14,device4:192.168.2.15,device5:192.168.2.16"
